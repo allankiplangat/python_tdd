@@ -5,5 +5,10 @@ python:
 
 install:
  - "pip install pytest"
+ - "pip install pytest-cov"
+ - "pip install coveralls"
  
 script: python -m pytest tests/
+
+after_success:
+ - coveralls
